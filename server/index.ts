@@ -1,8 +1,7 @@
 // server/index.ts
 import { app } from './app.ts'
 
-// Prefer PORT from env; default 3000
-const port = Number(process.env.PORT || 3000)
+const port = Number(process.env.PORT || 5173)
 
 export default {
   port,

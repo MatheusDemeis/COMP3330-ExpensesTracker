@@ -1,0 +1,17 @@
+{
+  "name": "lab1",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "scripts": {
+  "start": "bun server/index.ts",
+  "dev": "bun --hot server/index.ts"
+},
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "hono": "^4.9.6"
+  }
+}

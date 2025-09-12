@@ -76,25 +76,20 @@ expensesRoute.put('/:id{\\d+}', zValidator('json', createExpenseSchema), (c) => 
 })
 
 // PATCH /api/expenses/:id → partial update
-// PATCH /api/expenses/:id → partial update
 expensesRoute.patch('/:id{\\d+}', zValidator('json', updateExpenseSchema), (c) => {
   const id = Number(c.req.param('id'))
   const idx = expenses.findIndex((e) => e.id === id)
   if (idx === -1) return err(c, 'Not found', 404)
+
   const data = c.req.valid('json')
-  //Ensure body is not empty
   if (!data.title && !data.amount) {
     return err(c, 'Request body must contain at least one of: title, amount', 400)
   }
   const current = expenses[idx]
   if (!current) {
-    return err(c, 'Not found', 404)
+    return err(c, 'Expense not found', 404);
   }
-  const updated: Expense = { 
-    id, 
-    title: data.title ?? current.title, 
-    amount: data.amount ?? current.amount 
-  }
+  const updated: Expense = {...current, ...data};
   expenses[idx] = updated
   return ok(c, { expense: updated })
 })

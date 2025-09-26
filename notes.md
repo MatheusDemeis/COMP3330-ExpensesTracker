@@ -22,3 +22,9 @@ so switched over to hosting them on different ports.
 I had the CORS error too, it was blocking the request from frontend until I figured it out.
 Had an error where it could not read properties of undefined because data wasn’t available yet. 
 Fixed with data?.expenses.
+Lab 7 - 
+Configured QueryClientProvider for server state in React.
+Fetched expenses with useQuery, handled loading and error states.
+Added expenses with useMutation and invalidated cache to refresh list.
+Issues: CORS errors, wrong frontend port, undefined data.expenses, invalid invalidateQueries usage.
+Learned that proper cache invalidation ensures UI reflects backend changes.

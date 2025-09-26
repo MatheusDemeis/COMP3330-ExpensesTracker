@@ -16,3 +16,9 @@ Lab 5 -
 Missing baseUrl and paths in tsconfig.json caused ShadCN CLI warnings; references to non-existent tsconfig.app.json and tsconfig.node.json caused errors
 @tailwind directives initially triggered editor warnings, but styles applied correctly
 After fixing import alias, CLI generated button, card, and input components successfully
+Lab 6 -
+Initially tried hosting frontend and backend on same ports, but figured that is kinda complicated,
+so switched over to hosting them on different ports.
+I had the CORS error too, it was blocking the request from frontend until I figured it out.
+Had an error where it could not read properties of undefined because data wasn’t available yet. 
+Fixed with data?.expenses.

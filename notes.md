@@ -28,3 +28,7 @@ Fetched expenses with useQuery, handled loading and error states.
 Added expenses with useMutation and invalidated cache to refresh list.
 Issues: CORS errors, wrong frontend port, undefined data.expenses, invalid invalidateQueries usage.
 Learned that proper cache invalidation ensures UI reflects backend changes.
+Lab 8 - 
+I learned how to configure nested routes using TanStack Router and connect them with components. At first, setting up the dynamic route for `/expenses/:id` was confusing, but I now understand how parameters and `useParams` work.
+I struggled with errors like `Could not find an active match from "[object Object]"`. Through this, I learned the importance of making sure route definitions and links match exactly (e.g., `$id` vs `:id`) and how relative paths behave differently from absolute paths.
+Using @tanstack/react-query simplified fetching and caching data. I realized how useful query keys are for invalidation and ensuring the UI updates correctly when data changes.
